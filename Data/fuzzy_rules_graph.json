@@ -1,0 +1,16 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {"id": "temp_high", "type": "item", "label": "Temperatura Alta"},
+    {"id": "humidity_low", "type": "item", "label": "Humedad Baja"},
+    {"id": "rule_1", "type": "rule", "confidence": 0.85, "certainty": 0.76},
+    {"id": "fan_on", "type": "item", "label": "Ventilador Encendido"}
+  ],
+  "links": [
+    {"source": "temp_high", "target": "rule_1", "role": "antecedent"},
+    {"source": "humidity_low", "target": "rule_1", "role": "antecedent"},
+    {"source": "rule_1", "target": "fan_on", "role": "consequent"}
+  ]
+}
