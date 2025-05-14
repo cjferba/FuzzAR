@@ -1,31 +1,29 @@
-# Fuzzy Association Rule Miner
+# FuzzAR - Fuzzy Association Rule Miner
 
-Repositorio con la implementación de extracción de reglas de asociación difusas en Python, 
-incluyendo factor de certeza y exportación de grafo a JSON, así como documentación en GitHub Pages.
+FuzzAR es una librería en Python para la extracción y visualización de reglas de asociación difusas sobre datos continuos. Usa lógica difusa y grafos para representar y explorar el conocimiento.
 
-## Estructura
+## Características
 
-- `fuzzy_association_rule_miner.py`: Módulo principal con la clase `FuzzyAssociationRuleMiner`.
-- `requirements.txt`: Dependencias necesarias.
-- `docs/index.html`: Documentación para GitHub Pages.
-- `.gitignore`: Archivos ignorados por Git.
-- `examples/`: Ejemplos de uso.
+- Soporte para variables lingüísticas y conjuntos difusos.
+- Extracción de reglas con factor de certeza.
+- Representación de reglas como grafos.
+- Visualización y exportación a JSON.
+- Documentación generada con ReadTheDocs.
 
 ## Instalación
 
 ```bash
-git clone https://github.com/tu_usuario/fuzzy-assoc-rule-miner.git
-cd fuzzy-assoc-rule-miner
 pip install -r requirements.txt
 ```
 
-## Uso
+## Ejemplo rápido
 
 ```python
 from fuzzy_association_rule_miner import FuzzyAssociationRuleMiner
-import numpy as np
-import pandas as pd
+from fuzzy_visualization import plot_graph
 
-# Definir datos y configuración...
-# Ver README.md y docs/index.html para más detalles.
+# Tus datos y definiciones aquí...
+miner = FuzzyAssociationRuleMiner(data, variable_defs)
+rules = miner.extract_rules()
+plot_graph(miner.to_graph())
 ```
