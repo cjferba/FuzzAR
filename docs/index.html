@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentación - Fuzzy Association Rule Miner</title>
+</head>
+<body>
+  <h1>Fuzzy Association Rule Miner</h1>
+  <p>Implementación de extracción de reglas de asociación difusas en Python.</p>
+  <h2>Instalación</h2>
+  <pre><code>pip install -r requirements.txt</code></pre>
+  <h2>Uso Básico</h2>
+  <pre><code>from fuzzy_association_rule_miner import FuzzyAssociationRuleMiner
+import numpy as np
+import pandas as pd
+
+# Configuración y datos
+# ...
+
+miner = FuzzyAssociationRuleMiner(variables_config=config, threshold=0.6)
+miner.fuzzify(df)
+rules = miner.generate_rules()
+miner.print_rules(rules)</code></pre>
+  <h2>Exportar Grafo</h2>
+  <pre><code>graph = miner.build_graph(rules)
+miner.export_graph_to_json(graph, "grafo.json")</code></pre>
+</body>
+</html>
